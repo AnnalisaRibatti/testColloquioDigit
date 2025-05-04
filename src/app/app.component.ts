@@ -22,11 +22,13 @@ export class AppComponent {
     this.apiPexelsService.getImage().subscribe( (response: PexelsResponse) => {
       console.log(response);
 
-      this.images = response.photos;
-      this.selectedImage = response.photos[0];
+      if (response.photos.length > 0) {
+        this.images = response.photos;
+        this.selectedImage = response.photos[0];
 
-      this.listImages = this.images.map(photo => photo.alt);
-      this.listThumbnails = this.images.map(photo => photo.src.small);
+        this.listImages = this.images.map(photo => photo.alt);
+        this.listThumbnails = this.images.map(photo => photo.src.small);
+      }
     });
   }
 }

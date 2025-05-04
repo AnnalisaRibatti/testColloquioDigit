@@ -13,17 +13,20 @@ export class AppComponent {
 
   selectedImage!: Image;
   images!: Image[];
-  listImages!: string[]
+  listImages!: string[];
+  listThumbnails!: any[];
 
   constructor(private apiPexelsService: ApiPexelsService) {}
 
   ngOnInit(): void {
     this.apiPexelsService.getImage().subscribe( (response: PexelsResponse) => {
       console.log(response);
+
       this.images = response.photos;
-      this.selectedImage = response.photos[0]
+      this.selectedImage = response.photos[0];
 
       this.listImages = this.images.map(photo => photo.alt);
+      this.listThumbnails = this.images.map(photo => photo.src.small);
     });
   }
 }

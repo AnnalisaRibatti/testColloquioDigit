@@ -1,1 +1,11 @@
-<p>thumbnails-images works!</p>
+<div class="row">
+  <div
+    *ngFor="let elem of list"
+    class="col-3 mb-3"
+  >
+    <img
+      [src]="elem"
+      class="img-fluid rounded"
+    >
+  </div>
+</div>

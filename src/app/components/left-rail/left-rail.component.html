@@ -1,1 +1,5 @@
-<p>left-rail works!</p>
+<ul>
+  <li *ngFor="let elem of list; let i = index">
+    <b>Immagine {{ i + 1 }}</b>: {{elem}}
+  </li>
+</ul>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-left-rail',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './left-rail.component.css'
 })
 export class LeftRailComponent {
-
+  @Input()
+  list!: string[]
 }

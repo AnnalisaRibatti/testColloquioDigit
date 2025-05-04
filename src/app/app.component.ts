@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiPexelsService } from './services/api-pexels.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testColloquioDigit';
+
+  constructor(private apiPexelsService: ApiPexelsService) {}
+
+  ngOnInit(): void {
+    this.apiPexelsService.getImage().subscribe(response => {
+      console.log(response);
+    });
+  }
 }

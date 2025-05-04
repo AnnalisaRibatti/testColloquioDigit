@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LeftRailComponent } from './components/left-rail/left-rail.component';
 import { SelectedImageComponent } from './components/selected-image/selected-image.component';
 import { ThumbnailsImagesComponent } from './components/thumbnails-images/thumbnails-images.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ThumbnailsImagesComponent } from './components/thumbnails-images/thumbn
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

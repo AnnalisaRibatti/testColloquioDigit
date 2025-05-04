@@ -16,7 +16,8 @@ export class ApiPexelsService {
 
   constructor(private http: HttpClient) {}
 
-   getImage(): Observable<any> {
-    return this.http.get(this.apiUrl, { headers: this.headers });
+   getImage(): Observable<PexelsResponse> {
+    return this.http.get<PexelsResponse>('mock/esempioResponse.json')
+    //return this.http.get<PexelsResponse>(this.apiUrl, { headers: this.headers });
   }
 }

@@ -1,1 +1,10 @@
-<p>selected-image works!</p>
+<div class="text-center mr-5 mb-4">
+  <div class="mb-2">
+    <a [href]="image.photographer_url">Fotografo: {{image.photographer}}</a>
+  </div>
+  <img
+    [src]="image.src.original"
+    class="img-fluid"
+    alt="Immagine selezionata"
+  >
+</div>

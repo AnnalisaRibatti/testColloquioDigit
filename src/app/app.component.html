@@ -1,22 +1,24 @@
 <!-- <router-outlet></router-outlet> -->
 
-<div></div>
-
 <div class="container-fluid">
   <div class="row">
     <h1 class="text-primary">Benvenuto nella mia galleria!</h1>
   </div>
 
-  <div class="row">
+  <div class="row my-4">
 
-    <div class="col-3 bg-info vh-100 p-3">
+    <div class="col-3 bg-info p-3">  <!-- vh-100 -->
       <app-left-rail></app-left-rail>
     </div>
 
-    <div class="col-9 p-4">
-      <app-selected-image></app-selected-image>
+    <div class="col-9 px-4">
+      <div class="row">
+        <app-selected-image [image]="selectedImage"></app-selected-image>
+      </div>
 
-      <app-thumbnails-images></app-thumbnails-images>
+      <div class="row">
+        <app-thumbnails-images></app-thumbnails-images>
+      </div>
     </div>
   </div>
 </div>
